@@ -1,25 +1,18 @@
-let userRole = "admin";
-let accessLevel;
+let userinput = prompt("Enter type: ");
+var access;
 
-if (userRole === "admin") {
-    accessLevel = "Full access granted";
-} else if (userRole === "manager") {
-    accessLevel = "Limited access granted";
-} else {
-    accessLevel = "No access granted";
+switch(userinput){
+  case "Employee":
+    access = "Dietary Services"
+    break;
+  case "Enrolled Member":
+    access = "Dietary Services and one one interaction";
+    break;
+  case "Subscriber": 
+  access = "Partial Access to Dietary Services";
+    break;
+  case "Non-Subscriber":
+  access = "No Access to Dietary Services";
+    break;
 }
-
-console.log("Access Level:", accessLevel);
-
-let isLoggedIn = true;
-let userMessage;
-if (isLoggedIn) {
-    if (userRole === "admin") {
-        userMessage = "Welcome, Admin!";
-    } else {
-        userMessage = "Welcome, User!";
-    }
-} else {
-    userMessage = "Please log in to access the system.";
-}
-console.log("User Message:", userMessage);
+console.log("Access Level: " + access);
